@@ -6,6 +6,8 @@ import {MdButtonModule, MdCheckboxModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 
+import 'hammerjs';
+
 @NgModule({
   declarations: [
     AppComponent
