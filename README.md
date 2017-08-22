@@ -2,11 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
 
-Please, clone this project and Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
+For install, please:
+1) clone this project
+2) install all packages 'npm i'
+3) Run 'ng serve' for a dev server. Navigate to `http://localhost:4200/`
 
 ## Git Flow
 
-In this project use git flow strategy
+In this project use git flow strategy - please, checkout on master branch
 
 ## Build
 
