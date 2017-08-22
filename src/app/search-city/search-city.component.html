@@ -1,22 +1,9 @@
-<!-- <form class="example-form">
-  <md-input-container class="example-full-width">
-    <input mdInput placeholder="Введите название города">
-  </md-input-container>
-  <button md-raised-button color="primary"><md-icon>check</md-icon></button>
-</form> -->
-
-<!-- <md-input-container>
-  <input mdInput placeholder="Favorite food" value="Sushi">
-</md-input-container> -->
-
-<md-toolbar color="primary">
-  <span>My Company</span>
-  <span class="example-spacer"></span>
-  <button md-button><md-icon>menu</md-icon>Menu</button>
-</md-toolbar>
-<br>
-<form>
-  <md-input-container>
-    <input mdInput placeholder="Введите название города" value="" class="all-width">
-  </md-input-container>
-</form>
+<div class="search-content" fxLayout>
+  <form class="all-width" (ngSubmit)="onSubmit(oneform); oneform.reset()" #oneform = "ngForm">
+    <md-input-container>
+      <input type="text" name="title" mdInput placeholder="Введите название города (example: Krasnodar)" value="" [(ngModel)]="title" required>
+    </md-input-container>
+    <button type="submit" md-button color="primary" [disabled]="oneform.form.invalid">Search <md-icon>search</md-icon></button>
+  </form>
+  <h1>{{ title }}</h1>
+</div>

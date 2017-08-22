@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CityWeatherItem } from '../shared/city-weather-item.model';
+import { WeatherService } from '../shared/weather.service';
 
 @Component({
   selector: 'city-weather',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./city-weather.component.scss']
 })
 export class CityWeatherComponent implements OnInit {
+  cityWeather: CityWeatherItem;
 
-  constructor() { }
-
-  ngOnInit() {
+  // weatherService: WeatherService;
+  constructor(private _weatherService: WeatherService) {
+    // this.weatherService = _weatherService;
   }
 
+  ngOnInit(): any {
+    this.cityWeather = this._weatherService.getCityWeather();
+  }
 }

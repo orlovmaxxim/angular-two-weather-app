@@ -2,3 +2,12 @@
   width: 100vw;
   font-size: 26px;
 }
+
+.search-content {
+  form {
+    flex: 1;
+  }
+  md-input-container {
+    width: 650px;
+  }
+}
